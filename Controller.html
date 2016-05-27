@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    </head>
+    <body ng-app="myapp">
+        <div ng-controller="WebsiteInfomation">
+            <p>
+                Chủ sở hữu: {{data.fullname}} <br/>
+                Email: {{data.email}} <br/>
+                Điện Thoại: {{data.phone}} <br/>
+                Chủ Đề: {{data.topic}} <br/>
+                Website: {{data.website}}
+            </p>
+        </div>
+        <script>
+            angular.module('myapp', []).controller('WebsiteInfomation', function($scope){
+                $scope.data = {
+                    fullname : 'Nguyễn Văn Cường',
+                    email : 'Thehalfheart@gmail.com',
+                    phone : '0979 306 603',
+                    topic : 'Học lập trình online miễn phí',
+                    website : "freetuts.net"
+                };
+            });
+        </script>
+    </body>
+</html>
